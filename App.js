@@ -32,6 +32,17 @@ export default class App extends Component<Props> {
         >
           {/* {this.createMarkers()} */}
         </MapView>
+        <View pointerEvents="none" style={styles.members}>
+          {/* {this.createMembers()} */}
+        </View>
+        <View style={styles.buttonContainer}>
+          <TouchableOpacity
+            onPress={() => this.fitToMarkersToMap()}
+            style={[styles.bubble, styles.button]}
+          >
+            <Text>Fit Markers Onto Map</Text>
+          </TouchableOpacity>
+        </View>
       </View>
     );
   }
